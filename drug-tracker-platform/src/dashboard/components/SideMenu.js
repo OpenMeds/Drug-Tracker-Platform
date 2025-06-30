@@ -30,7 +30,7 @@ export default function SideMenu(props) {
         },
       }}
     >
-      <img src={require('../../logo_v1.png')} height="75" width="90" alt="logo"/>
+      <img src={window.location.origin+'/images/logo_v1.png'} height="75" width="90" alt="logo"/>
       
       <Divider />
       <Box
