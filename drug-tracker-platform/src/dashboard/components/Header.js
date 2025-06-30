@@ -8,7 +8,7 @@ import ColorModeIconDropdown from '../../shared-theme/ColorModeIconDropdown';
 
 import Search from './Search';
 
-export default function Header() {
+export default function Header(props) {
   return (
     <Stack
       direction="row"
@@ -16,7 +16,7 @@ export default function Header() {
         display: { xs: 'none', md: 'flex' },
         width: '100%',
         alignItems: { xs: 'flex-start', md: 'center' },
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         maxWidth: { sm: '100%', md: '1700px' },
         pt: 1.5,
       }}
@@ -24,8 +24,8 @@ export default function Header() {
     >
     
       <Stack direction="row" sx={{ gap: 1 }}>
+        <header className="header bold-text">{props.title}</header>
         
-        <ColorModeIconDropdown />
       </Stack>
     </Stack>
   );

@@ -4,17 +4,17 @@ import { alpha } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import AppNavbar from './components/AppNavbar';
-import Header from './components/Header';
-import MainGrid from './components/MainGrid';
-import SideMenu from './components/SideMenu';
+import AppNavbar from '../dashboard/components/AppNavbar';
+import Header from '../dashboard/components/Header';
+import MainGrid from '../dashboard/components/MainGrid';
+import SideMenu from '../dashboard/components/SideMenu';
 import AppTheme from '../shared-theme/AppTheme';
 import {
   chartsCustomizations,
   dataGridCustomizations,
   datePickersCustomizations,
   treeViewCustomizations,
-} from './theme/customizations';
+} from '../dashboard/theme/customizations';
 
 const xThemeComponents = {
   ...chartsCustomizations,
@@ -28,7 +28,7 @@ export default function Dashboard(props) {
     <AppTheme {...props} themeComponents={xThemeComponents}>
       <CssBaseline enableColorScheme />
       <Box sx={{ display: 'flex' }}>
-        <SideMenu idx ={props.idx}/>
+        <SideMenu idx={2}/>
         <AppNavbar />
         {/* Main content */}
         <Box
@@ -50,7 +50,7 @@ export default function Dashboard(props) {
               mt: { xs: 8, md: 0 },
             }}
           >
-            <Header title={"Global Drug Shortage Tracker"}/>
+            <Header />
             <MainGrid />
           </Stack>
         </Box>

@@ -13,6 +13,18 @@
   }
 }
 
+.header {
+  padding: 10px 20px;
+  color: rgb(3, 44, 89) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

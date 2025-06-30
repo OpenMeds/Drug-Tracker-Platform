@@ -14,9 +14,9 @@ import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 
 const mainListItems = [
-  { text: 'Shortage Tracker', icon: <AnalyticsRoundedIcon /> },
-  { text: 'African Drug Market', icon: <AnalyticsRoundedIcon /> },
-  { text: 'About', icon: <InfoRoundedIcon /> },
+  { text: 'Shortage Tracker', icon: <AnalyticsRoundedIcon />, url:"/" },
+  { text: 'African Drug Market', icon: <AnalyticsRoundedIcon />, url:"/africapharma" },
+  { text: 'About', icon: <InfoRoundedIcon />,url:"/about" },
 ];
 
 const secondaryListItems = [
@@ -25,13 +25,13 @@ const secondaryListItems = [
   { text: 'Feedback', icon: <HelpRoundedIcon /> },
 ];
 
-export default function MenuContent() {
+export default function MenuContent(props) {
   return (
     <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
       <List dense>
         {mainListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>
-            <ListItemButton selected={index === 0}>
+            <ListItemButton selected={index === props.idx} href={item.url}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>

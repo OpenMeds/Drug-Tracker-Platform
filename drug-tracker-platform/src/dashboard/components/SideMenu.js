@@ -11,7 +11,7 @@ import MenuContent from './MenuContent';
 import CardAlert from './CardAlert';
 import OptionsMenu from './OptionsMenu';
 
-const drawerWidth = 150;
+const drawerWidth = 190;
 
 const Drawer = styled(MuiDrawer)({
   width: drawerWidth,
@@ -24,7 +24,9 @@ const Drawer = styled(MuiDrawer)({
   },
 });
 
-export default function SideMenu() {
+
+
+export default function SideMenu(props) {
   return (
     <Drawer
       variant="permanent"
@@ -35,7 +37,8 @@ export default function SideMenu() {
         },
       }}
     >
-     
+      <img src={require('../../logo_v1.png')} height="75" width="90"/>
+      
       <Divider />
       <Box
         sx={{
@@ -45,7 +48,7 @@ export default function SideMenu() {
           flexDirection: 'column',
         }}
       >
-        <MenuContent />
+        <MenuContent idx = {props.idx}/>
         
       </Box>
       
