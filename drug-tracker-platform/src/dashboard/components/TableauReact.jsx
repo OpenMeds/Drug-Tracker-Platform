@@ -1,4 +1,6 @@
 import { Component } from 'react';
+// eslint-disable-next-line no-unused-vars
+import tableau from 'tableau-api';  
 
 var viz
 
