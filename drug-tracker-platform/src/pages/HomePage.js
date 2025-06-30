@@ -1,5 +1,3 @@
-import logo from '../logo.svg';
-import TableauReact from '../dashboard/components/TableauReact';
 import Dashboard from '../dashboard/Dashboard';
 import '../App.css';
 

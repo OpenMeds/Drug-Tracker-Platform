@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import tableau from 'tableau-api';
+import { Component } from 'react';
 
 var viz
 
