@@ -63,9 +63,9 @@ export default function AppNavbar() {
             spacing={1}
             sx={{ justifyContent: 'center', mr: 'auto' }}
           >
-            <CustomIcon />
+            
             <Typography variant="h4" component="h1" sx={{ color: 'text.primary' }}>
-              Dashboard
+              OpenMeds
             </Typography>
           </Stack>
           <ColorModeIconDropdown />

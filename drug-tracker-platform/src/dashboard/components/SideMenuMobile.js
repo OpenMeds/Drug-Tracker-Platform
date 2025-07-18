@@ -37,31 +37,17 @@ function SideMenuMobile({ open, toggleDrawer }) {
             direction="row"
             sx={{ gap: 1, alignItems: 'center', flexGrow: 1, p: 1 }}
           >
-            <Avatar
-              sizes="small"
-              alt="Riley Carter"
-              src="/static/images/avatar/7.jpg"
-              sx={{ width: 24, height: 24 }}
-            />
-            <Typography component="p" variant="h6">
-              Riley Carter
-            </Typography>
+            <img src={window.location.origin+'/images/logo_v2.png'} height="130" width="130" alt="logo" style={{marginBottom:  .4+ 'em', marginTop:  .2+ 'em', marginLeft:  .5+ 'em'}}/>
+    
           </Stack>
-          <MenuButton showBadge>
-            <NotificationsRoundedIcon />
-          </MenuButton>
+          
         </Stack>
         <Divider />
         <Stack sx={{ flexGrow: 1 }}>
           <MenuContent />
           <Divider />
         </Stack>
-        <CardAlert />
-        <Stack sx={{ p: 2 }}>
-          <Button variant="outlined" fullWidth startIcon={<LogoutRoundedIcon />}>
-            Logout
-          </Button>
-        </Stack>
+        
       </Stack>
     </Drawer>
   );
