@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppNavbar from '../dashboard/components/AppNavbar';
 import SideMenu from '../dashboard/components/SideMenu';
 import AppTheme from '../shared-theme/AppTheme';
-import React, { useRef, useState, setState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import {
@@ -31,11 +31,6 @@ const xThemeComponents = {
 
 export default function ContactUs(props) {
   const [statusMessage, setStatusMessage] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setState((prevState) => ({ ...prevState, [name]: value }))
-  }
 
   const form = useRef();
 
