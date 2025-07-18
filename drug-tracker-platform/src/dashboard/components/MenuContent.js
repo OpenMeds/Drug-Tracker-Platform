@@ -6,11 +6,13 @@ import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import ContactPageSharpIcon from '@mui/icons-material/ContactPageSharp';
 
 const mainListItems = [
-  { text: 'Shortage Tracker', icon: <AnalyticsRoundedIcon />, url:"/" },
-  { text: 'African Drug Market', icon: <AnalyticsRoundedIcon />, url:"/africapharma" },
+  { text: 'Dashboard', icon: <AnalyticsRoundedIcon />, url:"/" },
   { text: 'About', icon: <InfoRoundedIcon />,url:"/about" },
+  { text: 'Contact', icon: <ContactPageSharpIcon />, url:"/contact" },
+  
 ];
 
 
