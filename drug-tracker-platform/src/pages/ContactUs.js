@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppNavbar from '../dashboard/components/AppNavbar';
 import SideMenu from '../dashboard/components/SideMenu';
 import AppTheme from '../shared-theme/AppTheme';
-import React, { useRef } from 'react';
+import React, { useRef, useState, setState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import {
@@ -27,7 +27,16 @@ const xThemeComponents = {
 
 
 
+
+
 export default function ContactUs(props) {
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setState((prevState) => ({ ...prevState, [name]: value }))
+  }
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -40,9 +49,11 @@ export default function ContactUs(props) {
       .then(
         () => {
           console.log('SUCCESS!');
+          setStatusMessage("Email sent successfully");
         },
         (error) => {
           console.log('FAILED...', error.text);
+          setStatusMessage(`${error.text} happened`);
         },
       );
   };
@@ -146,6 +157,12 @@ export default function ContactUs(props) {
                       </div>
                       <div className="p-2 w-full">
                         <input className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg" type='submit' value="Send"/>
+                      </div>
+                      
+                      <div className="p-2 w-full">
+                        <div className="relative">
+                        <p style={{ color: 'green' }}>{statusMessage}</p>
+                        </div>
                       </div>
               <Copyright sx={{ my: 4 }} />
                       </div>
